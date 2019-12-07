@@ -10,6 +10,9 @@ struct StaticSome {
 template <typename Type>
 struct StaticNone {
 	constexpr StaticNone() = default;
+
+private:
+    Type uninitialized;
 };
 
 struct Point3D {
