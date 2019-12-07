@@ -4,7 +4,7 @@ template <typename Type>
 struct StaticSome {
 	Type element;
 
-	constexpr StaticSome(Type element) : element{element} {}
+	explicit constexpr StaticSome(Type element) : element{element} {}
 };
 
 template <typename Type>
