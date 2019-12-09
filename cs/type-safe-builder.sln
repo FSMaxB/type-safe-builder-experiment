@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "type-safe-builder", "type-safe-builder\type-safe-builder.csproj", "{1DA19D6A-462A-4BCE-B698-FBDFF39CFE5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "type-safe-builder-test", "type-safe-builder-test\type-safe-builder-test.csproj", "{006A8023-7494-4437-B110-6A537ED1F865}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DA19D6A-462A-4BCE-B698-FBDFF39CFE5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA19D6A-462A-4BCE-B698-FBDFF39CFE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA19D6A-462A-4BCE-B698-FBDFF39CFE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA19D6A-462A-4BCE-B698-FBDFF39CFE5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006A8023-7494-4437-B110-6A537ED1F865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006A8023-7494-4437-B110-6A537ED1F865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006A8023-7494-4437-B110-6A537ED1F865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006A8023-7494-4437-B110-6A537ED1F865}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
