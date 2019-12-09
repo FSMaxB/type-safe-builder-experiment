@@ -1,0 +1,19 @@
+{
+	"name": "type-safe-builder",
+	"version": "0.0.1",
+	"license": "MIT",
+	"author": "Max Bruckner",
+	"main": "dist/index.js",
+	"module": "dist/type-safe-builder.esm.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"run": "tsc && node src/index.js"
+	},
+	"devDependencies": {
+		"typescript": "^3.7.3"
+	}
+}
