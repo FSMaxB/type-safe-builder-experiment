@@ -158,6 +158,35 @@ error[E0599]: no method named `build` found for struct `Point3DBuilder<StaticNon
            - `Point3DBuilder<StaticSome<f64>, StaticSome<f64>, StaticSome<f64>>`
 ```
 
+### Swift
+
+Usage:
+```swift
+let point = point3d()
+	.z(3.0)
+	.y(2.0)
+	.x(1.0)
+	.build()
+```
+
+Error Message:
+```swift
+let point = point3d()
+	.z(3.0)
+	.y(2.0)
+	.build()
+```
+
+```
+type-safe-builder/swift/Tests/TypeSafeBuilderTests/TypeSafeBuilderTests.swift:8:5: error: referencing instance method 'build()' on 'Point3DBuilder' requires the types 'StaticNone<Double>' and 'StaticSome<Double>' be equivalent
+                        .y(2.0)
+                         ^
+type-safe-builder/swift/Sources/TypeSafeBuilder/Point3DBuilder.swift:43:1: note: where 'X' = 'StaticNone<Double>'
+extension Point3DBuilder
+^
+```
+
+
 ### TypeScript
 
 Usage:
