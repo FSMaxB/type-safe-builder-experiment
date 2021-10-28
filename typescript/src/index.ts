@@ -55,8 +55,8 @@ function build(builder: Point3DBuilder<StaticSome<number>, StaticSome<number>, S
 	return new Point3D(builder.x.element, builder.y.element, builder.z.element);
 }
 
-let point = build(x(y(z(point3d(), 3.0), 2.0), 1.0));
-let expected = new Point3D(1.0, 2.0, 3.0);
+const point = build(x(y(z(point3d(), 3.0), 2.0), 1.0));
+const expected = new Point3D(1.0, 2.0, 3.0);
 
 console.assert(point.x === expected.x);
 console.assert(point.y === expected.y);
