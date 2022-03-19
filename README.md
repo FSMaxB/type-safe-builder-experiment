@@ -226,3 +226,21 @@ src/index.ts:58:21 - error TS2345: Argument of type 'Point3DBuilder<StaticNone<n
     'element' is declared here.
 ```
 
+### Go
+
+Usage:
+```golang
+point := Build(X(Y(Z(Point3D(), 3.0), 2.0), 1.0))
+```
+
+Error message:
+
+```golang
+point := Build((Y(Z(Point3D(), 3.0), 2.0)))
+```
+
+`go1.18`
+```
+# type-safe-builder/builder [type-safe-builder/builder.test]
+./point3DBuilder_test.go:9:23: cannot use (Y(Z(Point3D(), 3.0), 2.0)) (value of type Point3DBuilder[StaticNone, StaticSome[float64], StaticSome[float64]]) as type Point3DBuilder[StaticSome[float64], StaticSome[float64], StaticSome[float64]] in argument to Build
+```
