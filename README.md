@@ -31,6 +31,7 @@ constexpr auto point = point3d()
 		.build();
 ```
 
+`g++ 11.2.0`
 ```
 type-safe-builder/cpp17/main.cpp: In instantiation of ‘constexpr Point3D Point3DBuilder<X, Y, Z>::build() const [with A = std::enable_if<false, void>; B = std::enable_if<true, void>; C = std::enable_if<true, void>; X = StaticNone<double>; Y = StaticSome<double>; Z = StaticSome<double>]’:
 type-safe-builder/cpp17/main.cpp:75:10:   required from here
@@ -42,6 +43,19 @@ type-safe-builder/cpp17/main.cpp:75:10:   in ‘constexpr’ expansion of ‘poi
 type-safe-builder/cpp17/main.cpp:75:32: error: ‘constexpr’ call flows off the end of the function
    75 |                         .build();
       |                                ^
+```
+
+`clang++ 13.01`
+```
+type-safe-builder/cpp17/main.cpp:63:29: error: no member named 'element' in 'StaticNone<double>'
+                return Point3D(this->ourX.element, this->ourY.element, this->ourZ.element);
+                               ~~~~~~~~~~ ^
+type-safe-builder/cpp17/main.cpp:75:5: note: in instantiation of function template specialization 'Point3DBuilder<StaticNone<double>, StaticSome<double>, StaticSome<double>>::build<std::enable_if<false>, std::enable_if<true>, std::enable_if<true>>' requested here
+                        .build();
+                         ^
+type-safe-builder/cpp17/main.cpp:75:5: error: constexpr variable 'point' must be initialized by a constant expression
+                        .build();
+                        ~^~~~~~~
 ```
 
 Notes:
