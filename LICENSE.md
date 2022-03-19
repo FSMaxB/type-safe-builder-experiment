@@ -1,6 +1,6 @@
 ISC License
 
-Copyright (C) 2019 Max Bruckner
+Copyright (C) 2019-2022 Max Bruckner
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
